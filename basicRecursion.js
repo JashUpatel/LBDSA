@@ -146,10 +146,11 @@ console.log(fibonacciSeriesWithRecursion(input));
 
 // print fib series using recursion
 const fibonacciRecursiveSeries = (n, arr = []) => {
-  if (n === 0) {
-    arr.push(0);
-    return arr;
-  }
+  // seems like it works without this condition
+  // if (n === 0) {
+  //   arr.push(0);
+  //   return arr;
+  // }
   if (n === 1) {
     arr.push(0, 1);
     return arr;
@@ -159,6 +160,6 @@ const fibonacciRecursiveSeries = (n, arr = []) => {
   return arr;
 };
 
-const input2 = 6;
+const input2 = 5;
 const fibSeries = fibonacciRecursiveSeries(input2);
 console.log(fibSeries.join(" ")); // Output: 0 1 1 2 3 5 8
